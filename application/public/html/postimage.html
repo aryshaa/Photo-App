@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="/public/css/form.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/header.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/posts.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/footer.css">
+  <script defer src="../public/js/frontendjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+  </html>
+  <body>
+<div class="form-container">
+    <header>
+        <h1>Post An Image</h1>
+    </header>
+    <form class="form" method="POST" enctype="multipart/form-data" action="/posts/createPost">
+        <fieldset>
+        <br>
+        <label for="title">Enter a title: </label>
+        <input type="text" id="title" name="title" required placeholder="Title">
+        <br>
+        <br>
+        <label for="description">Enter a description: </label>
+        <input type="text" id="description" name="description" required placeholder="description">
+        <br>
+        <br>
+        <label for="image">Upload an image to post: </label>
+        <input type="file" accept="image/*" id="image" name="uploadImage" required>
+        <br>
+        <br>
+        <label for="acceptable use">Accept the
+            <a href="#">Acceptable Use Policy</a>:
+        </label>
+        <input type="checkbox" id="acceptable-use" name="acceptable_use" required>
+        <br>
+        <br>
+        <label for="post-img">Click the button below to post the image.</label>
+        <br>
+        <br>
+        <button type="submit" id="postimage" name="postimage">Post Image</button>
+        <br>
+        </fieldset>
+    </form>
+</div>
+</body>
+
+<script>
+    const _form = document.getElementById('postimage');
+    _form.onsubmit = function(event){
+        event.printDefault();
+        let _body = new FormData(_form);
+
+        fetch('/posts/createPost',{
+            body:_body,
+            method:"POST"
+        })
+        .then((data) => {
+            console.log(data);
+            return data.json();
+        })
+        .then((dataAsObject) => {
+            console.log(dataAsObject);
+            alert(dataAsObject.message);
+            location.replace(dataAsObject.redirect);
+            
+        })
+        .catch(err => console.log(err));
+
+        
+    }
+
+
+axios('/posts/createPost',{
+            data:_body,
+            method:"POST"
+     
+        
+        })
+        .then((data) => {
+            console.log(data.data);
+            alert(data.data.message);
+            location.replace(data.data.redirect);
+            
+        })
+    
+
+
+</script>
