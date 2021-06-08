@@ -1,6 +1,6 @@
 
 ## Demo
-[![DEMO](https://youtu.be/cAqIqHLNxvw.jpg)](https://youtu.be/cAqIqHLNxvw) 
+[![DEMO](https://youtu.be/cAqIqHLNxvw.jpg)](https://www.youtube.com/watch?v=cAqIqHLNxvw) 
 
 Please follow the instructions below and fill in the information requested when prompted.
 
