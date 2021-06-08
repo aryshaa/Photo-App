@@ -1,8 +1,6 @@
 
-## Purpose
-
-The purpose of this repository is to store all the code for your web application. This also includes the history of all commits made and who made them. Only code submitted on the master branch will be graded.
-
+## Demo
+[![DEMO](https://youtu.be/cAqIqHLNxvw.jpg)](https://youtu.be/cAqIqHLNxvw) 
 
 Please follow the instructions below and fill in the information requested when prompted.
 
