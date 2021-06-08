@@ -6,15 +6,6 @@ The purpose of this repository is to store all the code for your web application
 
 Please follow the instructions below and fill in the information requested when prompted.
 
-## Student Information
-
-|               | Information   |
-|:-------------:|:-------------:|
-| Student Name  | Aryan Sharma    |
-| Student ID    | 921379313       |
-| Student Email | aaryan1@mail.sfsu.edu  |
-
-
 
 # Build/Run Instructions
 
